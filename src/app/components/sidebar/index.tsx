@@ -158,7 +158,7 @@ const SidebarMenu = () => {
                     </li>
                     {subMenus.map((menuItem, index) => (
                       <li key={index}>
-                        <Link href={menuItem.path} className="">
+                        <Link href={menuItem.path} className="" legacyBehavior>
                           {menuItem.title}
                         </Link>
                       </li>

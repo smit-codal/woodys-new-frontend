@@ -29,7 +29,7 @@ const ProductCard = () => {
         </div>
         <div className="flex justify-between items-start">
           <div className="flex md:items-center items-start">
-            <Link href="#">
+            <Link href="#" legacyBehavior>
 
               <div className="w-15 min-w-15 h-15 overflow-hidden bg-zinc-100 mr-3">
                 <Image
