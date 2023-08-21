@@ -1,7 +1,13 @@
-export default function EmptyCart() {
+"use client";
+
+import EmptyCart from "../components/cart/empty-cart";
+
+const EmptyCartPage = () => {
   return (
     <>
-      <h1>Empty cart</h1>
+      <EmptyCart />
     </>
   );
-}
+};
+
+export default EmptyCartPage;
