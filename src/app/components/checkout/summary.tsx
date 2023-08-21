@@ -91,7 +91,7 @@ const CheckoutSummary = ({ containerOffset }: any) => {
                   <tr key={index}>
                     <td>
                       <div className="flex md:items-center items-start">
-                        <Link href="#">
+                        <Link href="#" legacyBehavior>
 
                           <div className="w-[93px] h-[93px] min-w-[93px] md:w-25 md:min-w-25 md:h-25 overflow-hidden bg-zinc-100 mr-5 max-w-[93px] md:max-w-none">
                             <Image
@@ -108,7 +108,8 @@ const CheckoutSummary = ({ containerOffset }: any) => {
                         <div className="text-left ">
                           <Link
                             href="#"
-                            className="hover:text-rose-500 text-base font-semibold inline-block">
+                            className="hover:text-rose-500 text-base font-semibold inline-block"
+                            legacyBehavior>
 
                             {cartItem.prodName}
 
