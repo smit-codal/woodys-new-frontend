@@ -30,24 +30,26 @@ const ProductCard = () => {
         <div className="flex justify-between items-start">
           <div className="flex md:items-center items-start">
             <Link href="#">
-              <a>
-                <div className="w-15 min-w-15 h-15 overflow-hidden bg-zinc-100 mr-3">
-                  <Image
-                    src={cartProdImage}
-                    width={60}
-                    height={60}
-                    className="object-cover"
-                    alt="cart-prod-image"
-                  />
-                </div>
-              </a>
+
+              <div className="w-15 min-w-15 h-15 overflow-hidden bg-zinc-100 mr-3">
+                <Image
+                  src={cartProdImage}
+                  width={60}
+                  height={60}
+                  className="object-cover"
+                  alt="cart-prod-image"
+                />
+              </div>
+
             </Link>
 
             <div className="text-left ">
-              <Link href="#">
-                <a className="hover:text-rose-500 text-sm font-semibold inline-block">
+              <Link
+                href="#"
+                className="hover:text-rose-500 text-sm font-semibold inline-block">
+                
                   Generic Cialis
-                </a>
+                
               </Link>
               <span className="block text-xs">Pack of 8 capsules</span>
               <span className="block text-xs">25-100mg</span>

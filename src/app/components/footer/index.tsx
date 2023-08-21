@@ -84,7 +84,7 @@ const Footer = () => {
       <div className="bg-zinc-900 md:pt-11 md:pb-14 py-7">
         <div className="container">
           <div className="mb-8 md:mb-10.5 flex items-center">
-            <Link href="#" className="inline-block align-middle logo">
+            <Link href="#" className="inline-block align-middle logo" legacyBehavior>
               <Image src={logo} width="140" alt="woody-logo" />
             </Link>
             <div className="md:hidden ml-5">
@@ -125,7 +125,7 @@ const Footer = () => {
                     <ul className="footer-menu">
                       {item.children.map((footerMenu, index) => (
                         <li key={index}>
-                          <Link href={footerMenu.link}>{footerMenu.name}</Link>
+                          <Link href={footerMenu.link} legacyBehavior>{footerMenu.name}</Link>
                         </li>
                       ))}
                     </ul>
@@ -136,13 +136,13 @@ const Footer = () => {
               <div>
                 <h6 className="font-semibold mb-2 md:mb-6">Follow Us</h6>
                 <div className="social-icon">
-                  <Link href="#" className="text-2xl">
+                  <Link href="#" className="text-2xl" legacyBehavior>
                     <i className="fa-brands fa-instagram"></i>
                   </Link>
-                  <Link href="#" className="text-lg">
+                  <Link href="#" className="text-lg" legacyBehavior>
                     <i className="fa-brands fa-facebook-f"></i>
                   </Link>
-                  <Link href="#" className="text-2xl">
+                  <Link href="#" className="text-2xl" legacyBehavior>
                     <i className="fa-brands fa-linkedin"></i>
                   </Link>
                 </div>
@@ -159,7 +159,7 @@ const Footer = () => {
               {quickMenu.map(({ name, link }, index) => {
                 return (
                   <li key={index}>
-                    <Link href={link} className="">
+                    <Link href={link} className="" legacyBehavior>
                       {name}
                     </Link>
                   </li>

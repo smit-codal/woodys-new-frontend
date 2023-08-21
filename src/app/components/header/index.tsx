@@ -29,7 +29,7 @@ const Header = () => {
               />
             </div>
             <div className="text-center flex items-center justify-center">
-              <Link href="#" className="inline-block align-middle logo">
+              <Link href="#" className="inline-block align-middle logo" legacyBehavior>
                 <Image src={logo} alt="woody-logo" />
               </Link>
             </div>

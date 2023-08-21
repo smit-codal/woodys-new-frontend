@@ -94,25 +94,25 @@ const ShoppingCart = () => {
                 <tr key={index}>
                   <td>
                     <div className="flex md:items-center items-start">
-                      <Link href="#">
-                        <a>
-                          <div className="w-[93px] h-[93px] min-w-[93px] md:w-25 md:min-w-25 md:h-25 overflow-hidden bg-zinc-100 mr-5 max-w-[93px] md:max-w-none">
-                            <Image
-                              src={cartItem.image}
-                              width={100}
-                              height={100}
-                              className="object-cover"
-                              alt="cart-item-image"
-                            />
-                          </div>
-                        </a>
+                      <Link href="#" legacyBehavior>
+                        <div className="w-[93px] h-[93px] min-w-[93px] md:w-25 md:min-w-25 md:h-25 overflow-hidden bg-zinc-100 mr-5 max-w-[93px] md:max-w-none">
+                          <Image
+                            src={cartItem.image}
+                            width={100}
+                            height={100}
+                            className="object-cover"
+                            alt="cart-item-image"
+                          />
+                        </div>
                       </Link>
 
                       <div className="text-left">
-                        <Link href="#">
-                          <a className="hover:text-rose-500 text-base font-semibold mb-1 md:mb-0 inline-block">
-                            {cartItem.prodName}
-                          </a>
+                        <Link
+                          legacyBehavior
+                          href="#"
+                          className="hover:text-rose-500 text-base font-semibold mb-1 md:mb-0 inline-block"
+                        >
+                          {cartItem.prodName}
                         </Link>
                         <span className="block mb-1 md:hidden">
                           {cartItem.detail}
