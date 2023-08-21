@@ -80,14 +80,12 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="text-yellow-50">
+    <footer className="text-yellow-50 bottom-0">
       <div className="bg-zinc-900 md:pt-11 md:pb-14 py-7">
         <div className="container">
           <div className="mb-8 md:mb-10.5 flex items-center">
-            <Link href="#">
-              <a className="inline-block align-middle logo">
-                <Image src={logo} width="140" alt="woody-logo" />
-              </a>
+            <Link href="#" className="inline-block align-middle logo">
+              <Image src={logo} width="140" alt="woody-logo" />
             </Link>
             <div className="md:hidden ml-5">
               <span className="block font-bold">Woody’s Medical</span>
@@ -127,9 +125,7 @@ const Footer = () => {
                     <ul className="footer-menu">
                       {item.children.map((footerMenu, index) => (
                         <li key={index}>
-                          <Link href={footerMenu.link}>
-                            <a>{footerMenu.name}</a>
-                          </Link>
+                          <Link href={footerMenu.link}>{footerMenu.name}</Link>
                         </li>
                       ))}
                     </ul>
@@ -140,20 +136,14 @@ const Footer = () => {
               <div>
                 <h6 className="font-semibold mb-2 md:mb-6">Follow Us</h6>
                 <div className="social-icon">
-                  <Link href="#">
-                    <a className="text-2xl">
-                      <i className="fa-brands fa-instagram"></i>
-                    </a>
+                  <Link href="#" className="text-2xl">
+                    <i className="fa-brands fa-instagram"></i>
                   </Link>
-                  <Link href="#">
-                    <a className="text-lg">
-                      <i className="fa-brands fa-facebook-f"></i>
-                    </a>
+                  <Link href="#" className="text-lg">
+                    <i className="fa-brands fa-facebook-f"></i>
                   </Link>
-                  <Link href="#">
-                    <a className="text-2xl">
-                      <i className="fa-brands fa-linkedin"></i>
-                    </a>
+                  <Link href="#" className="text-2xl">
+                    <i className="fa-brands fa-linkedin"></i>
                   </Link>
                 </div>
               </div>
@@ -169,8 +159,8 @@ const Footer = () => {
               {quickMenu.map(({ name, link }, index) => {
                 return (
                   <li key={index}>
-                    <Link href={link}>
-                      <a className="">{name}</a>
+                    <Link href={link} className="">
+                      {name}
                     </Link>
                   </li>
                 );

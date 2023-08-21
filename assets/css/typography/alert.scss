@@ -1,0 +1,44 @@
+.ant-alert {
+    @apply text-sm border-0 p-4 shadow-md bg-white rounded-md text-zinc-900;
+    .ant-alert-close-icon {
+        @apply w-6 h-6 flex items-center justify-center cursor-pointer text-lg absolute top-4 right-4;
+    }
+}
+.ant-alert-with-description {
+    .ant-alert-message {
+        @apply text-zinc-900 pb-2 border-b border-gray-200 pr-8;
+    }
+}
+.alert-box {
+    @apply flex items-center py-4 px-4 md:px-5 gap-x-2.5;
+}
+.alert-icon {
+    @apply w-5 min-w-5 h-5 flex items-center justify-center;
+}
+.alert-error {
+    @apply bg-red-50;
+    .alert-icon {
+        @apply text-red-700;
+    }
+}
+.alert-success {
+    @apply bg-green-50;
+
+    .alert-icon {
+        @apply text-green-600;
+    }
+}
+.alert-warning {
+    @apply bg-amber-50;
+
+    .alert-icon {
+        @apply text-orange-600;
+    }
+}
+.alert-info {
+    @apply bg-accent-50;
+
+    .alert-icon {
+        @apply text-accent-600;
+    }
+}

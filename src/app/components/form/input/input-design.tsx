@@ -22,8 +22,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>
@@ -43,8 +43,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>
@@ -64,8 +64,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>
@@ -87,8 +87,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>
@@ -109,8 +109,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>
@@ -133,8 +133,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>
@@ -153,8 +153,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>
@@ -173,8 +173,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>
@@ -195,8 +195,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>
@@ -216,8 +216,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>
@@ -240,8 +240,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>
@@ -261,8 +261,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>
@@ -282,8 +282,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>
@@ -305,8 +305,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>
@@ -327,8 +327,8 @@ const InputDesignPage = () => (
               infoText={
                 <>
                   We’ll never share your details. See our
-                  <Link href="">
-                    <a className="ml-1">Privacy Policy</a>
+                  <Link href="" className="ml-1">
+                    Privacy Policy
                   </Link>
                   .
                 </>

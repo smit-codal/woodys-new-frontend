@@ -1,0 +1,93 @@
+.summary-list {
+  @apply text-gray-900 text-base;
+  li {
+    @apply flex justify-between items-center;
+    + li {
+      @apply mt-1 md:mt-2;
+    }
+    &:last-child {
+      @apply mt-2;
+    }
+  }
+}
+
+.cart-table {
+  @apply table-auto w-full text-zinc-900;
+  tr {
+    &:first-child {
+      td {
+        @apply pt-5;
+      }
+    }
+    &:last-child {
+      td {
+        @apply pb-5;
+      }
+    }
+  }
+  th,
+  td {
+    @apply px-2;
+    &:first-child {
+      @apply pl-0;
+    }
+    &:last-child {
+      @apply pr-0;
+    }
+  }
+  th {
+    @apply font-normal py-3 border-b border-gray-200;
+  }
+  td {
+    @apply py-1.5;
+  }
+  &.summary-table {
+    tr {
+      &:first-child {
+        td {
+          @apply pt-0;
+        }
+      }
+    }
+  }
+}
+.spinner-btn {
+  @apply w-6 h-6 min-w-6 text-xs btn rounded-full btn-gray;
+}
+.cart-remove {
+  @apply text-xs cursor-pointer bg-gray-500 hover:bg-gray-600 w-5 min-w-5 h-5 rounded-full text-white block text-center leading-[22px] transition-all;
+}
+
+.spinner-block {
+  .form-control {
+    @apply w-8 h-6 rounded-[1px] text-center px-1 py-0 text-xs bg-transparent;
+  }
+}
+// .cart-prod-img {
+//     img {
+//         max-width: 93px !important;
+//     }
+// }
+.seller-card {
+  @apply bg-white rounded-2xl border border-zinc-50 pb-7 pt-4.5 transition-all duration-200 ease-linear px-6 cursor-pointer;
+  &:hover {
+    @apply shadow-cardShadow;
+  }
+  @layer components {
+    &:hover {
+      .seller-btn {
+        @apply max-h-[68px];
+      }
+    }
+  }
+}
+@layer components {
+  .seller-btn {
+    @apply max-h-0 overflow-hidden transition-all duration-200 ease-linear;
+  }
+}
+.best-seller-slide {
+  .slick-slide {
+    @apply px-2;
+  }
+}

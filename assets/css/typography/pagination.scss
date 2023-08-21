@@ -1,0 +1,178 @@
+.ant-pagination {
+    @apply border border-gray-300 inline-flex rounded text-xs overflow-hidden;
+    .ant-pagination-item {
+        @apply border-0 h-7.5 min-w-7.5 border-l border-gray-300 rounded-none me-0;
+        a {
+            @apply block text-gray-500;
+        }
+        &:not(.ant-pagination-item-active) {
+            &:hover {
+                @apply bg-gray-100;
+                a {
+                    @apply text-gray-700;
+                }
+            }
+        }
+    }
+
+    .ant-pagination-jump-next,
+    .ant-pagination-jump-prev {
+        @apply border-0 h-7.5 min-w-7.5 border-l border-gray-300 rounded-none me-0 leading-[30px] font-sans;
+        a {
+            @apply block text-gray-500;
+        }
+        &:not(.ant-pagination-item-active) {
+            &:hover {
+                @apply bg-gray-100;
+                a {
+                    @apply text-gray-700;
+                }
+            }
+        }
+        &:hover {
+            .ant-pagination-item-ellipsis {
+                opacity: 1;
+                @apply text-gray-700;
+            }
+        }
+    }
+    .ant-pagination-item-active {
+        @apply bg-gray-200 font-normal;
+        a {
+            @apply text-gray-700;
+        }
+        &:hover {
+            @apply border-gray-300;
+            a {
+                @apply text-gray-700;
+            }
+        }
+    }
+    .ant-pagination-prev,
+    .ant-pagination-next {
+        @apply h-7.5 min-w-7.5 rounded-none me-0 leading-[30px] text-gray-500 font-sans;
+        .ant-pagination-item-link {
+            @apply block px-3 rounded-none border-0;
+            &:hover,
+            &:active {
+                @apply text-gray-700;
+            }
+            &[disabled] {
+                @apply text-gray-300;
+            }
+
+            .anticon {
+                &:before {
+                    @apply font-black block font-fontawesome;
+                }
+            }
+        }
+        &:hover {
+            .ant-pagination-item-link {
+                @apply bg-gray-100;
+            }
+        }
+        &:active {
+            .ant-pagination-item-link {
+                @apply bg-gray-200;
+            }
+        }
+    }
+    .ant-pagination-prev {
+        .ant-pagination-item-link {
+            .anticon {
+                &:before {
+                    @apply content-["\f053"];
+                }
+            }
+        }
+    }
+    .ant-pagination-next {
+        @apply border-l border-gray-300;
+        .ant-pagination-item-link {
+            .anticon {
+                &:before {
+                    @apply content-["\f054"];
+                }
+            }
+        }
+    }
+    .ant-pagination-item-link {
+        .anticon {
+            svg {
+                display: none;
+            }
+        }
+    }
+    &.ant-pagination-disabled {
+        .ant-pagination-item {
+            a {
+                @apply text-gray-300;
+            }
+            &:not(.ant-pagination-item-active) {
+                &:hover {
+                    @apply bg-white;
+                    a {
+                        @apply text-gray-300;
+                    }
+                }
+            }
+        }
+        .ant-pagination-item-active {
+            @apply bg-gray-200 border-gray-300;
+            &:hover {
+                @apply bg-gray-200;
+            }
+            a {
+                @apply text-gray-600;
+            }
+        }
+        .ant-pagination-jump-next,
+        .ant-pagination-jump-prev {
+            a {
+                @apply text-gray-300;
+            }
+            &:not(.ant-pagination-item-active) {
+                &:hover {
+                    @apply bg-white;
+                    a {
+                        @apply text-gray-300;
+                    }
+                }
+            }
+            &:hover {
+                .ant-pagination-item-ellipsis {
+                    @apply text-gray-300;
+                }
+            }
+        }
+        .ant-pagination-prev,
+        .ant-pagination-next {
+            @apply text-gray-300;
+
+            .ant-pagination-item-link {
+                @apply text-gray-300;
+                &:hover,
+                &:active {
+                    @apply text-gray-300;
+                }
+            }
+            &:hover,
+            &:active {
+                .ant-pagination-item-link {
+                    @apply bg-white;
+                }
+            }
+        }
+    }
+    &.onlyprevnext {
+        .ant-pagination-item,
+        .ant-pagination-jump-next,
+        .ant-pagination-jump-prev {
+            display: none !important;
+        }
+        .ant-pagination-item-link {
+            @apply min-w-20.5;
+        }
+    }
+}

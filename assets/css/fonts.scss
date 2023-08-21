@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "Gibson";
+    src: url("../fonts/Gibson-SemiBoldItalic.eot");
+    src: local("../fonts/Gibson SemiBold Italic"), local("../fonts/Gibson-SemiBoldItalic"),
+        url("../fonts/Gibson-SemiBoldItalic.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Gibson-SemiBoldItalic.woff2") format("woff2"),
+        url("../fonts/Gibson-SemiBoldItalic.woff") format("woff"),
+        url("../fonts/Gibson-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Gibson";
+    src: url("../fonts/Gibson-Italic.eot");
+    src: local("../fonts/Gibson Italic"), local("../fonts/Gibson-Italic"),
+        url("../fonts/Gibson-Italic.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Gibson-Italic.woff2") format("woff2"), url("../fonts/Gibson-Italic.woff") format("woff"),
+        url("../fonts/Gibson-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Gibson";
+    src: url("../fonts/Gibson-Bold.eot");
+    src: local("../fonts/Gibson Bold"), local("../fonts/Gibson-Bold"),
+        url("../fonts/Gibson-Bold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Gibson-Bold.woff2") format("woff2"), url("../fonts/Gibson-Bold.woff") format("woff"),
+        url("../fonts/Gibson-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gibson";
+    src: url("../fonts/Gibson.eot");
+    src: local("../fonts/Gibson"), url("../fonts/Gibson.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Gibson.woff2") format("woff2"), url("../fonts/Gibson.woff") format("woff"),
+        url("../fonts/Gibson.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gibson";
+    src: url("../fonts/Gibson-BoldItalic.eot");
+    src: local("../fonts/Gibson Bold Italic"), local("../fonts/Gibson-BoldItalic"),
+        url("../fonts/Gibson-BoldItalic.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Gibson-BoldItalic.woff2") format("woff2"), url("../fonts/Gibson-BoldItalic.woff") format("woff"),
+        url("../fonts/Gibson-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Gibson";
+    src: url("../fonts/Gibson-SemiBold.eot");
+    src: local("../fonts/Gibson SemiBold"), local("../fonts/Gibson-SemiBold"),
+        url("../fonts/Gibson-SemiBold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Gibson-SemiBold.woff2") format("woff2"), url("../fonts/Gibson-SemiBold.woff") format("woff"),
+        url("../fonts/Gibson-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}

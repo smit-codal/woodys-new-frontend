@@ -1,0 +1,26 @@
+.ant-modal {
+    @apply font-sans text-gray-900;
+    .ant-modal-header {
+        @apply mb-0 text-zinc-900;
+    }
+    .ant-modal-title {
+        @apply text-lg pb-2 border-b border-gray-200;
+    }
+    .ant-modal-content {
+        @apply rounded-md p-7;
+    }
+    .ant-modal-close {
+        @apply w-6 h-6 text-base text-gray-900 top-5 end-7 hover:bg-transparent hover:text-rose-500;
+    }
+    .ant-modal-body {
+        @apply leading-[21px] pt-2;
+    }
+}
+.ant-modal-close-x {
+    &:before {
+        @apply font-black block content-["\f00d"] font-fontawesome leading-6;
+    }
+    .anticon {
+        @apply hidden;
+    }
+}

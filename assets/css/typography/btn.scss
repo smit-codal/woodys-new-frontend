@@ -1,0 +1,233 @@
+// common button style
+.btn {
+    @apply font-sans transition-all rounded-4xl flex items-center justify-center gap-x-2 font-normal bg-transparent border-2 border-solid border-transparent whitespace-nowrap;
+    &.btn-social {
+        @apply border;
+    }
+}
+// btn sizes
+.btn-xs {
+    @apply gap-x-1;
+}
+@layer components {
+    .btn-xs {
+        @apply py-1.5 px-2.5 text-xs;
+
+        .btn-icon {
+            @apply w-4 min-w-4 text-[11px] leading-3;
+        }
+        &.btn-social {
+            @apply py-[0.4375rem] px-[0.6875rem];
+        }
+    }
+    .btn-sm {
+        @apply py-1.5 px-2.5 text-sm;
+        .btn-icon {
+            @apply w-5 min-w-5 text-[11px] leading-3;
+        }
+        &.btn-social {
+            @apply py-[0.4375rem] px-[0.6875rem];
+        }
+    }
+    .btn-md {
+        @apply py-2 px-4.5 text-sm;
+        .btn-icon {
+            @apply w-6 min-w-6 text-[13px] leading-4;
+        }
+        &.btn-social {
+            @apply py-[0.5625rem] px-[1.1875rem];
+        }
+    }
+    .btn-lg {
+        @apply py-2.5 px-4.5 text-base border-3;
+        .btn-icon {
+            @apply w-6 min-w-6 leading-4;
+        }
+        &.btn-social {
+            @apply py-[0.6875rem] px-[1.4375rem];
+        }
+    }
+    .btn-xl {
+        @apply py-3 px-5.5 text-lg border-3;
+        .btn-icon {
+            @apply w-7 min-w-7 text-xl leading-4;
+        }
+    }
+
+    .btn-xs-rounded {
+        @apply w-8.5 min-w-8.5 h-8.5 text-[11px];
+    }
+    .btn-sm-rounded {
+        @apply w-9.25 min-w-9.25 h-9.25 text-base rounded-full;
+    }
+    .btn-md-rounded {
+        @apply w-10.25 min-w-10.25 h-10.25 text-xl rounded-full;
+    }
+    .btn-lg-rounded {
+        @apply w-12 min-w-12 h-12 text-xl rounded-full;
+    }
+    .btn-xl-rounded {
+        @apply w-13.75 min-w-13.75 h-13.75 text-2xl rounded-full;
+    }
+}
+// btn color theme
+.btn-accent {
+    @apply bg-accent-400 hover:bg-accent-500 text-white;
+    &.disabled {
+        @apply bg-accent-disable;
+    }
+    &.btn-outline {
+        @apply bg-white border-accent-300 text-zinc-900 hover:shadow-inner hover:shadow-accent-300;
+        &.disabled {
+            @apply bg-white border-accent-400/60 text-zinc-900/60 hover:shadow-none;
+
+            // .btn-icon {
+            //     @apply text-accent-300/50 #{!important};
+            // }
+        }
+        // .btn-icon {
+        //     @apply text-accent-300 transition-all;
+        // }
+        // &:hover {
+        //     .btn-icon {
+        //         @apply text-white;
+        //     }
+        // }
+    }
+}
+.btn-secondary {
+    @apply bg-zinc-900 hover:bg-zinc-700 text-white;
+    &.disabled {
+        @apply bg-zinc-300 border-zinc-300;
+    }
+    &.btn-outline {
+        @apply bg-transparent border-zinc-900 hover:bg-gray-100 text-zinc-900;
+        &.disabled {
+            @apply bg-gray-100 border-gray-100 text-gray-500;
+            .btn-icon {
+                @apply text-zinc-300;
+            }
+        }
+    }
+}
+
+.btn-gray {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-800;
+    &.disabled {
+        @apply bg-gray-100 text-gray-600;
+    }
+}
+
+.btn-white {
+    @apply bg-white hover:bg-gray-50 text-zinc-900;
+    &.disabled {
+        @apply bg-gray-50 text-gray-500;
+    }
+    &.btn-outline {
+        @apply bg-transparent border-white hover:bg-white text-white hover:text-gray-900;
+        &.disabled {
+            @apply bg-transparent border-gray-500 text-gray-500;
+        }
+    }
+}
+.btn-green {
+    @apply bg-green-700 hover:bg-green-800 text-white;
+    &.disabled {
+        @apply bg-green-800/60;
+    }
+    &.btn-outline {
+        @apply bg-transparent border-green-700 hover:border-green-800 hover:bg-green-800 text-green-700 hover:text-white;
+        &.disabled {
+            @apply bg-transparent border-gray-400 text-gray-400;
+        }
+    }
+}
+
+.btn-red {
+    @apply bg-red-700 hover:bg-red-800 text-white;
+    &.disabled {
+        @apply bg-rose-disable;
+    }
+}
+
+.btn-blue {
+    @apply bg-blue-600 hover:bg-blue-800 text-white;
+    &.disabled {
+        @apply bg-blue-200 border-blue-200;
+    }
+    &.btn-outline {
+        @apply bg-transparent border-blue-600 hover:bg-blue-800 hover:border-blue-800 text-blue-600  hover:text-white;
+        &.disabled {
+            @apply bg-transparent border-blue-400 text-gray-500;
+            .btn-icon {
+                @apply text-blue-400;
+            }
+        }
+    }
+}
+
+.btn-orange {
+    @apply bg-orange-600 hover:bg-orange-800 text-white;
+    &.disabled {
+        @apply bg-orange-100;
+    }
+    &.btn-outline {
+        @apply bg-transparent text-orange-900 border-orange-600 hover:bg-orange-900 hover:border-orange-900 hover:text-white;
+        &.disabled {
+            @apply bg-orange-50 border-orange-50 text-orange-800;
+        }
+    }
+}
+
+.btn-rose {
+    @apply bg-rose-700 hover:bg-rose-800 text-white;
+    &.disabled {
+        @apply bg-rose-disable;
+    }
+}
+
+.btn-dark-rose {
+    @apply bg-rose-500 hover:bg-rose-600 text-white;
+    &.disabled {
+        @apply bg-rose-disable;
+    }
+}
+
+.btn-yellow {
+    @apply bg-yellow-200 hover:bg-yellow-300 text-zinc-900;
+    &.disabled {
+        @apply bg-yellow-100 text-zinc-400;
+    }
+}
+
+.btn-light-yellow {
+    @apply bg-yellow-50 hover:bg-yellow-200 text-zinc-900 hover:border-rose-500;
+    &.disabled {
+        @apply bg-yellow-50;
+    }
+}
+
+.btn-stone {
+    @apply bg-gray-700 hover:bg-gray-600 text-white;
+    &.disabled {
+        @apply bg-gray-800 text-gray-500;
+    }
+}
+
+.btn-pdp {
+    @apply border-zinc-100 text-zinc-900 hover:bg-gray-700 hover:text-white hover:border-zinc-700;
+    &.active {
+        @apply bg-gray-700 text-white border-zinc-700;
+    }
+}
+
+// Social button
+.btn-social-dark {
+    @apply bg-gray-900 border-gray-900 text-white;
+}
+.btn-social-light {
+    @apply bg-white border-white text-gray-900;
+}
+.btn-gray-outline {
+    @apply bg-white border-gray-200 text-gray-900;
+}

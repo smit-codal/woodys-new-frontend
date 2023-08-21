@@ -1,0 +1,58 @@
+.badge {
+  @apply py-0.5 px-2.5 text-gray-900 rounded-2xl font-semibold text-sm;
+}
+
+.ant-dropdown {
+}
+
+[class^="ant-dropdown-menu"],
+[class*=" ant-dropdown-menu"] {
+  @apply font-sans;
+}
+
+.ant-dropdown,
+.ant-dropdown-menu-submenu {
+  .ant-dropdown-menu {
+    @apply p-0 shadow-lg rounded overflow-hidden;
+    .ant-dropdown-menu-item,
+    .ant-dropdown-menu-submenu-title {
+      @apply py-3 px-5 text-base text-zinc-900 hover:bg-yellow-50 rounded-none;
+    }
+    .ant-dropdown-menu-item-active,
+    .ant-dropdown-menu-submenu-title-active {
+      @apply bg-zinc-50;
+    }
+  }
+}
+.ant-dropdown-menu-item {
+  + .ant-dropdown-menu-item {
+    @apply border-t border-zinc-50;
+  }
+}
+.order-circle {
+  @apply w-5 h-5 rounded-full bg-accent-300 mb-5 block mx-auto text-[10px] text-white leading-5 after:content-[''] after:absolute after:-left-4.5 after:-right-4.5 after:top-[7px] after:h-[5px] after:bg-accent-300;
+  i {
+    @apply z-10 relative;
+  }
+  &.first {
+    @apply after:left-1/2;
+  }
+  &.last {
+    @apply after:right-1/2;
+  }
+}
+.subscription-item {
+  p {
+    @apply relative;
+    &:not(:last-child)::after {
+      @apply content-["•"] ml-3 text-zinc-900 absolute;
+    }
+  }
+}
+
+.toast-animation {
+  @apply absolute -top-52 right-4 transition-all ease-in-out duration-700;
+  &.animate {
+    @apply top-0;
+  }
+}

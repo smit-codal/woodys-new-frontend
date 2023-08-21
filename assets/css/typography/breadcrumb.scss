@@ -1,0 +1,17 @@
+.ant-breadcrumb {
+    @apply text-base;
+    ol {
+        align-items: center;
+    }
+    a {
+        @apply text-gray-700 h-auto p-0 rounded-none hover:text-rose-500 hover:bg-transparent m-0 block;
+    }
+    .ant-breadcrumb-separator {
+        @apply mx-4 text-gray-400 text-sm;
+    }
+    li {
+        &:last-child {
+            @apply text-gray-500;
+        }
+    }
+}

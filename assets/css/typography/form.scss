@@ -1,0 +1,521 @@
+// Input
+.form-label {
+    @apply mb-2 text-gray-900 text-sm flex;
+}
+.input-icon {
+    @apply absolute w-5 h-5 top-1/2 -mt-2.5 flex items-center justify-center;
+    &.left {
+        @apply left-4 text-gray-500;
+    }
+    &.right {
+        @apply right-4 text-gray-600;
+    }
+}
+.form-control {
+    @apply text-base font-normal text-gray-900 border border-gray-300 bg-gray-50 py-[0.6875rem] px-11 w-full placeholder:text-gray-500 focus:border-gray-300 focus:outline-none focus:ring-0 rounded-none h-12;
+    &.disabled {
+        @apply text-gray-400 cursor-not-allowed;
+        ~ .input-icon {
+            @apply text-gray-400 cursor-not-allowed;
+        }
+    }
+    &.form-success {
+        @apply bg-green-50 border-green-500 text-green-700 placeholder:text-green-700;
+        ~ .input-icon {
+            &.left,
+            &.right {
+                @apply text-green-700;
+            }
+        }
+    }
+    &.form-error {
+        @apply bg-red-50 border-red-500 text-red-600 placeholder:text-red-600;
+        ~ .input-icon {
+            &.left,
+            &.right {
+                @apply text-red-600;
+            }
+        }
+    }
+}
+
+.form-control-sm {
+    @apply py-[0.4375rem] h-10;
+}
+.form-control-lg {
+    @apply py-[0.8125rem] h-13;
+}
+.form-helper-text {
+    @apply text-gray-500 mt-2 text-sm;
+    a {
+        @apply text-gray-900;
+    }
+    &.form-helper-text-success {
+        @apply text-green-700;
+        a {
+            @apply text-inherit;
+        }
+    }
+    &.form-helper-text-error {
+        @apply text-red-600;
+        a {
+            @apply text-inherit;
+        }
+    }
+}
+
+// Switch
+.switch-heading-text {
+    @apply text-base text-gray-900;
+}
+.switch-helper-text {
+    @apply text-xs block text-gray-500;
+}
+
+.switch-sm {
+    + .switch-text {
+        .switch-helper-text {
+            @apply text-xs;
+        }
+    }
+}
+.switch-lg {
+    + .switch-text {
+        .switch-heading-text {
+            @apply text-lg;
+        }
+    }
+}
+body {
+    .ant-switch {
+        @apply bg-gray-200 h-6;
+        &:focus-visible {
+            @apply outline-none;
+        }
+        &:hover:not(.ant-switch-disabled) {
+            @apply bg-gray-200;
+        }
+        .ant-switch-handle {
+            @apply w-5 h-5;
+            &:before {
+                @apply rounded-full;
+                box-shadow: none;
+            }
+        }
+        &.ant-switch-checked {
+            @apply bg-accent-300 #{!important};
+            .ant-switch-handle {
+                inset-inline-start: calc(100% - 22px);
+            }
+            &:hover:not(.ant-switch-disabled) {
+                @apply bg-accent-300 #{!important};
+            }
+        }
+        &.ant-switch-disabled {
+            @apply opacity-100;
+            + .switch-text {
+                .switch-heading-text,
+                .switch-helper-text {
+                    @apply text-gray-400;
+                }
+            }
+        }
+        // Small switch
+        &.switch-sm {
+            @apply h-5 min-w-10;
+            .ant-switch-handle {
+                @apply w-4 h-4;
+            }
+            &.ant-switch-checked {
+                .ant-switch-handle {
+                    inset-inline-start: calc(100% - 18px);
+                }
+            }
+        }
+        // Large Switch
+        &.switch-lg {
+            @apply h-7 min-w-14;
+            .ant-switch-handle {
+                @apply w-5.5 h-5.5 top-[3px] start-[3px];
+            }
+            &.ant-switch-checked {
+                .ant-switch-handle {
+                    inset-inline-start: calc(100% - 25px);
+                }
+            }
+        }
+        &.dark-switch {
+            @apply bg-gray-600;
+            &:hover:not(.ant-switch-disabled) {
+                @apply bg-gray-600;
+            }
+            .ant-switch-handle {
+                &:before {
+                    @apply bg-gray-400;
+                }
+            }
+            + .switch-text {
+                .switch-heading-text {
+                    @apply text-white;
+                }
+                .switch-helper-text {
+                    @apply text-gray-400;
+                }
+            }
+            &.ant-switch-checked {
+                .ant-switch-handle {
+                    &:before {
+                        @apply bg-white;
+                    }
+                }
+            }
+            &.ant-switch-disabled {
+                + .switch-text {
+                    .switch-heading-text,
+                    .switch-helper-text {
+                        @apply text-gray-500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Radio
+
+.radio-heading-text {
+    @apply text-sm text-gray-900;
+}
+.radio-helper-text {
+    @apply text-xs block text-gray-500;
+}
+.ant-radio-wrapper {
+    .ant-radio {
+        @apply self-start mt-[0.18rem];
+    }
+    &.items-center {
+        .ant-radio {
+            @apply mt-0.5;
+        }
+    }
+    .ant-radio-inner {
+        @apply border-gray-300 bg-gray-50;
+        &::after {
+            @apply bg-gray-50;
+        }
+    }
+    .ant-radio-checked {
+        .ant-radio-inner {
+            @apply border-accent-300 bg-accent-300;
+            &::after {
+                @apply scale-50;
+            }
+        }
+    }
+    &:hover {
+        .ant-radio-inner {
+            @apply border-accent-300;
+        }
+    }
+    .ant-radio-disabled {
+        .ant-radio-inner {
+            @apply border-gray-300 bg-gray-50;
+        }
+    }
+    &.ant-radio-wrapper-disabled {
+        .radio-heading-text,
+        .radio-helper-text {
+            @apply text-gray-400;
+        }
+        &.dark-radio {
+            .radio-heading-text,
+            .radio-helper-text {
+                @apply text-gray-500;
+            }
+        }
+    }
+    &.dark-radio {
+        .radio-heading-text {
+            @apply text-white;
+        }
+        .radio-helper-text {
+            @apply text-gray-400;
+        }
+        .ant-radio-inner {
+            @apply border-gray-600 bg-gray-700;
+            &::after {
+                @apply bg-white;
+            }
+        }
+        .ant-radio-checked {
+            .ant-radio-inner {
+                @apply border-accent-300 bg-accent-300;
+            }
+        }
+    }
+}
+
+// Checkbox
+.ant-checkbox {
+    + span {
+        @apply pr-0;
+    }
+}
+.ant-checkbox-group {
+    @apply flex;
+}
+.ant-checkbox-wrapper {
+    @apply text-sm flex w-full;
+    .ant-checkbox {
+        @apply self-start mt-0.5;
+    }
+    .ant-checkbox-inner {
+        @apply border-gray-300 bg-gray-50 rounded-none after:border-0 after:transform-none after:text-xs after:leading-[14px] after:left-0.5 after:top-0 after:text-white after:font-black after:w-auto after:h-auto after:font-fontawesome;
+        @apply after:content-["\f00c"] #{!important};
+    }
+    .ant-checkbox-checked {
+        .ant-checkbox-inner {
+            @apply border-accent-300 bg-accent-300;
+        }
+    }
+
+    &:not(.ant-checkbox-wrapper-disabled) {
+        &:hover {
+            .ant-checkbox-inner {
+                @apply border-accent-300;
+            }
+            .ant-checkbox-checked:not(.ant-checkbox-disabled) {
+                @apply after:hidden;
+                .ant-checkbox-inner {
+                    @apply bg-accent-300;
+                }
+            }
+        }
+    }
+
+    .ant-checkbox-disabled {
+        .ant-checkbox-inner {
+            @apply border-gray-300 bg-gray-50;
+        }
+    }
+    &.ant-checkbox-wrapper-disabled {
+        .radio-heading-text,
+        .radio-helper-text {
+            @apply text-gray-400;
+        }
+        &.dark-checkbox {
+            .radio-heading-text,
+            .radio-helper-text {
+                @apply text-gray-500;
+            }
+        }
+    }
+    &.dark-checkbox {
+        .radio-heading-text {
+            @apply text-white;
+        }
+        .radio-helper-text {
+            @apply text-gray-400;
+        }
+        .ant-checkbox-inner {
+            @apply border-gray-600 bg-gray-700;
+        }
+        .ant-checkbox-checked {
+            .ant-checkbox-inner {
+                @apply border-accent-300 bg-accent-300;
+            }
+        }
+    }
+}
+
+// Select
+
+.ant-select {
+    @apply block text-base text-gray-500;
+    &:not(.ant-select-customize-input) {
+        .ant-select-selector {
+            @apply border-gray-300 bg-gray-50;
+        }
+    }
+    .ant-select-selection-placeholder {
+        @apply text-gray-500;
+    }
+    .ant-select-arrow {
+        @apply w-5 h-5 -mt-2.5 text-gray-600 text-base end-4;
+        svg {
+            @apply hidden;
+        }
+        .anticon {
+            &:before {
+                @apply font-black block content-["\f078"] font-fontawesome;
+            }
+        }
+    }
+    &:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) {
+        &:hover {
+            .ant-select-selector {
+                @apply border-gray-300;
+            }
+        }
+    }
+    &.ant-select-focused {
+        &:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) {
+            .ant-select-selector {
+                @apply shadow-none border-gray-300;
+            }
+        }
+    }
+}
+.ant-select-single {
+    .ant-select-selection-search-input {
+        @apply ring-0;
+    }
+    &:not(.ant-select-customize-input) {
+        .ant-select-selector {
+            @apply h-12;
+            @apply pl-4 pr-11.5 #{!important};
+            .ant-select-selection-search-input {
+                @apply h-11.5;
+            }
+            &.ant-select-show-arrow {
+                .ant-select-selection-search {
+                    @apply start-4 end-11.5;
+                }
+            }
+        }
+    }
+    .ant-select-selector {
+        @apply text-gray-900 font-sans text-base rounded-none #{!important};
+        .ant-select-selection-item,
+        .ant-select-selection-placeholder {
+            @apply leading-11.5;
+            @apply pe-0 #{!important};
+        }
+        .ant-select-selection-search {
+            @apply start-4 end-11.5;
+        }
+    }
+    &.ant-select-open {
+        .ant-select-selection-item {
+            @apply text-gray-900 #{!important};
+        }
+    }
+    &.ant-select-sm,
+    &.auto-comp-sm {
+        &:not(.ant-select-customize-input) {
+            .ant-select-selector {
+                @apply h-10;
+                @apply pl-4 pr-11.5 #{!important};
+                .ant-select-selection-search-input {
+                    @apply h-9.5;
+                }
+            }
+            &.ant-select-show-arrow {
+                .ant-select-selection-search {
+                    @apply start-4 end-11.5;
+                }
+            }
+        }
+        .ant-select-selector {
+            .ant-select-selection-item,
+            .ant-select-selection-placeholder {
+                @apply leading-9.5;
+                @apply pe-0 #{!important};
+            }
+            .ant-select-selection-search {
+                @apply start-4 end-11.5;
+            }
+        }
+    }
+    &.ant-select-lg,
+    &.auto-comp-lg {
+        &:not(.ant-select-customize-input) {
+            .ant-select-selector {
+                @apply h-13;
+                @apply pl-4 pr-12.5 #{!important};
+                .ant-select-selection-search-input {
+                    @apply h-12.5;
+                }
+            }
+            &.ant-select-show-arrow {
+                .ant-select-selection-search {
+                    @apply start-4 end-12.5;
+                }
+            }
+        }
+        .ant-select-selector {
+            .ant-select-selection-item,
+            .ant-select-selection-placeholder {
+                @apply leading-12.5;
+                @apply pe-0 #{!important};
+            }
+            .ant-select-selection-search {
+                @apply start-4 end-12.5;
+            }
+        }
+    }
+}
+.ant-select-dropdown {
+    @apply font-sans text-base rounded shadow-lg;
+    .ant-select-item {
+        @apply py-2 px-3 text-gray-900 text-base;
+    }
+    .ant-select-item-option-selected,
+    .ant-select-item-option-active {
+        &:not(.ant-select-item-option-disabled) {
+            @apply font-normal text-gray-900 bg-yellow-50;
+        }
+    }
+}
+.ant-select-disabled {
+    &.ant-select:not(.ant-select-customize-input) {
+        .ant-select-selector {
+            @apply bg-gray-50;
+        }
+    }
+    &.ant-select {
+        .ant-select-arrow {
+            @apply text-gray-400;
+        }
+    }
+    .ant-select-selection-placeholder {
+        @apply text-gray-400;
+    }
+}
+
+.ant-select-status-error {
+    &:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) {
+        .ant-select-selector {
+            @apply bg-red-50;
+            @apply text-red-600 border-red-500 #{!important};
+        }
+    }
+    .ant-select-arrow,
+    .ant-select-selection-placeholder {
+        @apply text-red-600;
+    }
+    &.ant-select-open {
+        .ant-select-selection-item {
+            @apply text-red-600 #{!important};
+        }
+    }
+}
+.ant-select-status-warning {
+    &:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) {
+        .ant-select-selector {
+            @apply bg-green-50;
+            @apply text-green-700 border-green-500 #{!important};
+        }
+    }
+    .ant-select-arrow,
+    .ant-select-selection-placeholder {
+        @apply text-green-600;
+    }
+    &.ant-select-open {
+        .ant-select-selection-item {
+            @apply text-green-600 #{!important};
+        }
+    }
+}
+
+// ant-select-focused ant-select-open

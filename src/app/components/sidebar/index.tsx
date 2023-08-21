@@ -110,10 +110,10 @@ const SidebarMenu = () => {
             </span>
           </span>
           <div className="text-center">
-            <Link href="#">
-              <a className="inline-block align-middle logo">
-                <Image src={logo} alt="woody-logo-orange" />
-              </a>
+            <Link href="#" className="inline-block align-middle logo">
+
+              <Image src={logo} alt="woody-logo-orange" />
+
             </Link>
             <div
               className={`mt-10 flex menu-block ${
@@ -123,20 +123,20 @@ const SidebarMenu = () => {
               <ul className="main-menu level-0">
                 {menuList.map((item, index) => (
                   <li key={index}>
-                    <Link href={item.path}>
-                      <a
-                        className={`${
-                          activeMenu === item.title ? "active" : ""
-                        }`}
-                        onClick={() => openSubMenu(item.title, item.children)}
-                      >
-                        {item.title}
-                        {item.children.length > 0 ? (
-                          <span className="w-6 min-w-6 text-lg ml-2.5 text-rose-500">
-                            <i className="fa-regular fa-chevron-right"></i>
-                          </span>
-                        ) : null}
-                      </a>
+                    <Link
+                      href={item.path}
+                      className={`${
+                        activeMenu === item.title ? "active" : ""
+                      }`}
+                      onClick={() => openSubMenu(item.title, item.children)}>
+
+                      {item.title}
+                      {item.children.length > 0 ? (
+                        <span className="w-6 min-w-6 text-lg ml-2.5 text-rose-500">
+                          <i className="fa-regular fa-chevron-right"></i>
+                        </span>
+                      ) : null}
+
                     </Link>
                   </li>
                 ))}
@@ -145,22 +145,19 @@ const SidebarMenu = () => {
                 {subMenus && subMenus.length > 0 && (
                   <>
                     <li>
-                      <Link href="#">
-                        <a
-                          className="backmenu"
-                          onClick={() => setShowSubmenu(false)}
-                        >
-                          <span className="mr-2.5 w-6 min-w-6 text-lg">
-                            <i className="fa-regular fa-chevron-left"></i>
-                          </span>
-                          {activeMenu}
-                        </a>
+                      <Link href="#" className="backmenu" onClick={() => setShowSubmenu(false)}>
+
+                        <span className="mr-2.5 w-6 min-w-6 text-lg">
+                          <i className="fa-regular fa-chevron-left"></i>
+                        </span>
+                        {activeMenu}
+
                       </Link>
                     </li>
                     {subMenus.map((menuItem, index) => (
                       <li key={index}>
-                        <Link href={menuItem.path}>
-                          <a className="">{menuItem.title}</a>
+                        <Link href={menuItem.path} className="">
+                          {menuItem.title}
                         </Link>
                       </li>
                     ))}

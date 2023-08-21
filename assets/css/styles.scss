@@ -1,0 +1,104 @@
+// You probably already include the core styles
+@import "./../../node_modules/@fortawesome/fontawesome-pro/scss/fontawesome.scss";
+// You can include all the other styles the same as before
+@import "./../../node_modules/@fortawesome/fontawesome-pro/scss/solid.scss";
+@import "./../../node_modules/@fortawesome/fontawesome-pro/scss/brands.scss";
+@import "./../../node_modules/@fortawesome/fontawesome-pro/scss/regular.scss";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+// Font family
+@import "fonts.scss";
+// @import "slick-slider/slick.scss";
+// @import "slick-slider/slick-theme.scss";
+// Typography
+@import "typography/btn.scss";
+@import "typography/form.scss";
+@import "typography/breadcrumb.scss";
+@import "typography/alert.scss";
+@import "typography/pagination.scss";
+@import "typography/datepicker.scss";
+@import "typography/modal.scss";
+
+@import "tailwindcss/utilities";
+
+// Layout
+@import "layout/header.scss";
+@import "layout/footer.scss";
+
+//Cart
+@import "cart/cart.scss";
+
+//Checkout
+@import "checkout/checkout.scss";
+
+//account
+@import "account/account.scss";
+
+html {
+  height: 100vh;
+}
+body {
+  @apply text-base h-full text-zinc-900 font-sans;
+}
+#wrapper {
+  @apply h-full flex flex-col;
+}
+body,
+[class^="ant-tabs"],
+.ant-radio-wrapper,
+.ant-checkbox-wrapper,
+.ant-alert,
+.ant-pagination .ant-pagination-item,
+.ant-breadcrumb,
+.ant-picker,
+.ant-picker-dropdown,
+.ant-select {
+  // font-family: "canada-type-gibson", sans-serif;
+  @apply font-sans;
+}
+
+a,
+.btn,
+button {
+  @apply transition-all outline-0;
+}
+
+@layer components {
+  .style-heading {
+    @apply text-3xl px-4 font-bold;
+  }
+}
+.ant-tooltip {
+  .ant-tooltip-arrow {
+    &:before {
+      @apply bg-gray-900;
+      clip-path: polygon(
+        1.6568542494923806px 100%,
+        50% 1.6568542494923806px,
+        14.34314575050762px 100%,
+        1.6568542494923806px 100%
+      );
+    }
+  }
+  .ant-tooltip-inner {
+    @apply rounded-none shadow px-4 bg-gray-900;
+  }
+}
+
+.container {
+  @apply mx-auto px-4;
+}
+
+.table-responsive {
+  @apply overflow-auto;
+}
+th,
+td {
+  @apply text-center;
+}
+.image-align {
+  span {
+    @apply align-middle;
+  }
+}

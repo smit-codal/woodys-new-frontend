@@ -29,10 +29,8 @@ const Header = () => {
               />
             </div>
             <div className="text-center flex items-center justify-center">
-              <Link href="#">
-                <a className="inline-block align-middle logo">
-                  <Image src={logo} alt="woody-logo" />
-                </a>
+              <Link href="#" className="inline-block align-middle logo">
+                <Image src={logo} alt="woody-logo" />
               </Link>
             </div>
             <div className="flex justify-end items-center gap-3">

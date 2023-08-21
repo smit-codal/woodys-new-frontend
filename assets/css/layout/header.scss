@@ -1,0 +1,118 @@
+header {
+  @apply z-50;
+  .logo {
+    @apply max-w-[120px] md:max-w-none;
+  }
+}
+.logo {
+  span {
+    @apply align-middle;
+  }
+}
+.btn-take-quiz-header {
+  @apply gap-x-1 font-semibold;
+  &.btn-secondary {
+    @apply bg-yellow-100 hover:bg-yellow-100 hover:shadow-inner hover:shadow-zinc-500;
+    .btn-icon {
+      @apply w-5 min-w-5 h-5 leading-5;
+    }
+    &.btn-quiz-cart {
+      .btn-icon {
+        @apply leading-[21px] md:leading-6;
+      }
+    }
+    &.btn-xl {
+      .btn-icon {
+        @apply text-lg leading-6;
+      }
+    }
+  }
+}
+.btn-hover-icon-change {
+  &:hover {
+    .btn-icon {
+      i {
+        @apply font-normal;
+      }
+    }
+  }
+}
+.btn-header-user {
+  &.btn-md-rounded {
+    @apply w-11 h-11;
+  }
+
+  &.btn-rose {
+    @apply bg-rose-300 hover:bg-rose-700;
+  }
+}
+.btn-header-cart {
+  @apply px-2 md:px-3 py-0.5 md:py-2 font-semibold text-xs md:text-sm gap-x-0.5 md:gap-x-1;
+  &.btn-white {
+    @apply border-rose-100 hover:bg-rose-100;
+  }
+  .btn-icon {
+    @apply leading-5 text-xs md:text-xl md:leading-5 max-md:min-w-4.5 max-md:w-4.5 h-4.5 md:h-6 text-rose-600 flex items-center justify-center;
+  }
+}
+.cart-badge {
+  @apply w-3.5 h-3.5 md:w-5 md:h-5 border border-rose-50 rounded-full bg-zinc-900 absolute top-[1px] left-[-7px] text-[8px] leading-3 md:text-xs text-center;
+}
+.menu-icon {
+  @apply min-w-9 w-9 h-9 cursor-pointer flex justify-center items-center text-2xl;
+}
+
+.sidemenu-outer {
+  @apply fixed left-0 right-0 top-0 bottom-0 z-10 bg-black/50 invisible opacity-0 transition-all;
+}
+.sidemenu-content {
+  @apply absolute left-[-300px] md:left-[-428px] w-[300px] md:w-[428px] top-0 bottom-0 z-10 bg-zinc-900 text-yellow-50 transition-all overflow-auto;
+}
+
+.menu-collapse {
+  .sidemenu-outer {
+    @apply visible opacity-100;
+  }
+  .sidemenu-content {
+    @apply left-0;
+  }
+}
+.menu-block {
+  @apply overflow-hidden;
+}
+.main-menu {
+  @apply md:overflow-auto relative min-w-[260px] md:min-w-[388px] transition-all;
+  //max-height: calc(100vh - 320px);
+  li {
+    + li {
+      @apply mt-5;
+    }
+  }
+  a {
+    @apply font-serif font-bold text-xl text-yellow-50 inline-flex items-center py-1.5 px-5 rounded-2xl hover:bg-zinc-700;
+    &.active {
+      @apply bg-rose-500 text-white;
+      span {
+        @apply text-white;
+      }
+    }
+    &.backmenu {
+      @apply text-rose-500 inline-flex items-center justify-center;
+    }
+  }
+}
+.submenu-open {
+  .level-0 {
+    @apply -translate-x-full;
+  }
+  .level-1 {
+    @apply -translate-x-full;
+  }
+}
+
+// .sidemenu-outer {
+//     @apply visible opacity-100;
+// }
+// .sidemenu-content {
+//     @apply left-0;
+// }

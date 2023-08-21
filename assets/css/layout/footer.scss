@@ -1,0 +1,46 @@
+footer {
+    @apply text-xs md:text-sm mt-auto;
+    @apply md:pb-0 #{!important};
+    a {
+        @apply hover:text-rose-500;
+    }
+    .form-helper-text.form-helper-text-error {
+        @apply text-rose-500;
+    }
+    .form-control {
+        @apply pl-0 pt-2.5 pb-3 text-yellow-50 text-sm h-auto leading-[21px] bg-transparent border-t-0 border-l-0 border-r-0 border-b-2 border-yellow-50;
+        @apply placeholder:text-zinc-200 #{!important};
+        &.form-error,
+        &.form-success {
+            @apply bg-transparent placeholder:text-yellow-50 border-yellow-50 text-yellow-50;
+        }
+    }
+}
+.footer-email {
+    .form-label {
+        @apply text-inherit;
+    }
+}
+.footer-menu {
+    li {
+        + li {
+            @apply mt-2;
+        }
+    }
+    a {
+        @apply inline-block align-middle;
+    }
+}
+.social-icon {
+    @apply flex gap-x-3;
+    a {
+        @apply w-6 h-6  flex items-center justify-center;
+    }
+}
+
+.quick-link {
+    @apply flex gap-x-3 md:gap-x-8.5 flex-wrap;
+    a {
+        @apply inline-block align-middle;
+    }
+}

@@ -1,0 +1,27 @@
+.step-block {
+    @apply text-gray-400 text-sm relative w-full max-w-[112px] after:content-[''] after:absolute after:left-1/2 after:ml-5.5 md:after:top-2.5 md:after:w-[calc(100%+8px)] lg:after:w-[calc(100%-40px)] xl:after:w-[calc(100%-5px)] 2xl:after:w-[calc(100%+8px)] after:bg-gray-200 after:h-[1px] last:after:hidden;
+    &.current {
+        @apply text-zinc-900;
+        .step-circle {
+            @apply bg-zinc-900;
+        }
+    }
+    &.completed {
+        @apply text-zinc-900 after:bg-zinc-900;
+        .step-circle {
+            @apply bg-accent-300 text-white;
+            i {
+                @apply opacity-100;
+            }
+        }
+    }
+    &:first-child {
+        @apply pr-[43px] lg:pr-[39px] xl:pr-[43px] max-w-[69px] lg:max-w-[65px] xl:max-w-[69px] after:left-[34px] after:ml-0 md:after:w-[calc(100%+51px)] lg:after:w-[calc(100%-1px)] xl:after:w-[calc(100%+38px)] 2xl:after:w-[calc(100%+51px)];
+    }
+}
+.step-circle {
+    @apply mb-3 w-5 h-5 text-[10px] leading-5 rounded-full bg-gray-300 block mx-auto text-center;
+    i {
+        @apply opacity-0;
+    }
+}
