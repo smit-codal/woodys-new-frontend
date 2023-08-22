@@ -1,4 +1,5 @@
-import "assets/css/styles.scss";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
 
@@ -16,7 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div id="wrapper">
+          <Header />
+          <main className="grow">{children}</main>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
