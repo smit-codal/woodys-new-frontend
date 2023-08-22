@@ -115,7 +115,7 @@ const SidebarMenu = () => {
               className="inline-block align-middle logo"
               legacyBehavior
             >
-              <Image src={logo} alt="woody-logo-orange" />
+              <Image className="mx-auto" src={logo} alt="woody-logo-orange" />
             </Link>
             <div
               className={`mt-10 flex menu-block ${
