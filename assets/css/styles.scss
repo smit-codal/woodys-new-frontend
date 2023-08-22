@@ -9,8 +9,8 @@
 @import "tailwindcss/components";
 // Font family
 @import "fonts.scss";
-// @import "slick-slider/slick.scss";
-// @import "slick-slider/slick-theme.scss";
+@import "slick-slider/slick.scss";
+@import "slick-slider/slick-theme.scss";
 // Typography
 @import "typography/btn.scss";
 @import "typography/form.scss";
