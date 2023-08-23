@@ -142,14 +142,20 @@ const Footer = () => {
               <div>
                 <h6 className="font-semibold mb-2 md:mb-6">Follow Us</h6>
                 <div className="social-icon">
-                  <Link href="#" className="text-2xl" legacyBehavior>
-                    <i className="fa-brands fa-instagram"></i>
+                  <Link href="#" legacyBehavior>
+                    <a className="text-2xl">
+                      <i className="fa-brands fa-instagram"></i>
+                    </a>
                   </Link>
-                  <Link href="#" className="text-lg" legacyBehavior>
-                    <i className="fa-brands fa-facebook-f"></i>
+                  <Link href="#" legacyBehavior>
+                    <a className="text-lg">
+                      <i className="fa-brands fa-facebook-f"></i>
+                    </a>
                   </Link>
-                  <Link href="#" className="text-2xl" legacyBehavior>
-                    <i className="fa-brands fa-linkedin"></i>
+                  <Link href="#" legacyBehavior>
+                    <a className="text-2xl">
+                      <i className="fa-brands fa-linkedin"></i>
+                    </a>
                   </Link>
                 </div>
               </div>

@@ -110,12 +110,10 @@ const SidebarMenu = () => {
             </span>
           </span>
           <div className="text-center">
-            <Link
-              href="#"
-              className="inline-block align-middle logo"
-              legacyBehavior
-            >
-              <Image className="mx-auto" src={logo} alt="woody-logo-orange" />
+            <Link href="#" legacyBehavior>
+              <a className="inline-block align-middle logo">
+                <Image src={logo} alt="woody-logo-orange" />
+              </a>
             </Link>
             <div
               className={`mt-10 flex menu-block ${
@@ -144,22 +142,23 @@ const SidebarMenu = () => {
                 {subMenus && subMenus.length > 0 && (
                   <>
                     <li>
-                      <Link
-                        href="#"
-                        className="backmenu"
-                        onClick={() => setShowSubmenu(false)}
-                        legacyBehavior
-                      >
-                        <span className="mr-2.5 w-6 min-w-6 text-lg">
-                          <i className="fa-regular fa-chevron-left"></i>
-                        </span>
+                      <Link href="#" legacyBehavior>
+                        <a
+                          className="backmenu"
+                          onClick={() => setShowSubmenu(false)}
+                        >
+                          <span className="mr-2.5 w-6 min-w-6 text-lg">
+                            <i className="fa-regular fa-chevron-left"></i>
+                          </span>
+                        </a>
+
                         {activeMenu}
                       </Link>
                     </li>
                     {subMenus.map((menuItem, index) => (
                       <li key={index}>
-                        <Link href={menuItem.path} className="" legacyBehavior>
-                          {menuItem.title}
+                        <Link href={menuItem.path} legacyBehavior>
+                          <a>{menuItem.title}</a>
                         </Link>
                       </li>
                     ))}
