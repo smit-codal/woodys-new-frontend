@@ -123,18 +123,22 @@ const SidebarMenu = () => {
               <ul className="main-menu level-0">
                 {menuList.map((item, index) => (
                   <li key={index}>
-                    <a
-                      href={item.path}
-                      className={`${activeMenu === item.title ? "active" : ""}`}
-                      onClick={() => openSubMenu(item.title, item.children)}
-                    >
-                      {item.title}
-                      {item.children.length > 0 ? (
-                        <span className="w-6 min-w-6 text-lg ml-2.5 text-rose-500">
-                          <i className="fa-regular fa-chevron-right"></i>
-                        </span>
-                      ) : null}
-                    </a>
+                    <Link href="#" legacyBehavior>
+                      <a
+                        href={item.path}
+                        className={`${
+                          activeMenu === item.title ? "active" : ""
+                        }`}
+                        onClick={() => openSubMenu(item.title, item.children)}
+                      >
+                        {item.title}
+                        {item.children.length > 0 ? (
+                          <span className="w-6 min-w-6 text-lg ml-2.5 text-rose-500">
+                            <i className="fa-regular fa-chevron-right"></i>
+                          </span>
+                        ) : null}
+                      </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -142,7 +146,7 @@ const SidebarMenu = () => {
                 {subMenus && subMenus.length > 0 && (
                   <>
                     <li>
-                      <Link href="#" legacyBehavior>
+                      <Link href={subMenus[0].path} legacyBehavior>
                         <a
                           className="backmenu"
                           onClick={() => setShowSubmenu(false)}
@@ -150,9 +154,8 @@ const SidebarMenu = () => {
                           <span className="mr-2.5 w-6 min-w-6 text-lg">
                             <i className="fa-regular fa-chevron-left"></i>
                           </span>
+                          {activeMenu}
                         </a>
-
-                        {activeMenu}
                       </Link>
                     </li>
                     {subMenus.map((menuItem, index) => (
