@@ -7,6 +7,12 @@ import Image from "next/image";
 import Button from "@/components/button/index";
 import { useRouter } from "next/navigation";
 import SidebarMenu from "../sidebar";
+import { Metadata, ResolvingMetadata } from "next";
+
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
 const Header = () => {
   const { push } = useRouter();

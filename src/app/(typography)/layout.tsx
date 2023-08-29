@@ -1,12 +1,8 @@
-import "assets/css/styles.scss";
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
-
-// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Woody's",
-  description: "",
+  title: "Typography | Woody's",
+  description: "This is woody's typography component",
 };
 
 export default function RootLayout({
@@ -16,7 +12,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <main className="grow">{children}</main>
+      </body>
     </html>
   );
 }
