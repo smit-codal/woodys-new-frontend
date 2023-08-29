@@ -21,11 +21,9 @@ const BestSellers = ({ bestSellers }: { bestSellers: bestSellersProps }) => {
       </button>
     ),
     infinite: false,
+    slidesToShow: 4,
+    speed: 500,
     responsive: [
-      {
-        breakpoint: 9999,
-        settings: "unslick",
-      },
       {
         breakpoint: 1199.98,
         settings: {
@@ -56,10 +54,7 @@ const BestSellers = ({ bestSellers }: { bestSellers: bestSellersProps }) => {
         <h1 className="text-xl xl:text-3xl font-semibold mb-2.5 text-center xl:text-left">
           Check out our best sellers
         </h1>
-        <Slider
-          className="best-seller-slide xl:grid xl:grid-cols-4 xl:gap-4 px-6 xl:px-0"
-          {...settings}
-        >
+        <Slider className="best-seller-slide" {...settings}>
           {bestSellers.map((item, index) => (
             <div key={index}>
               <div className="seller-card">
