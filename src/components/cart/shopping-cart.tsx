@@ -95,12 +95,11 @@ const ShoppingCart = () => {
                   <td>
                     <div className="flex md:items-center items-start">
                       <Link href="#" legacyBehavior>
-                        <div className="w-[93px] h-[93px] min-w-[93px] md:w-25 md:min-w-25 md:h-25 overflow-hidden bg-zinc-100 mr-5 max-w-[93px] md:max-w-none">
+                        <div className="relative w-[93px] h-[93px] min-w-[93px] md:w-25 md:min-w-25 md:h-25 overflow-hidden bg-zinc-100 mr-5 max-w-[93px] md:max-w-none">
                           <Image
                             src={cartItem.image}
-                            width={100}
-                            height={100}
                             className="object-cover"
+                            fill
                             alt="cart-item-image"
                           />
                         </div>
