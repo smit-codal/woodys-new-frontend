@@ -106,12 +106,10 @@ const ShoppingCart = () => {
                       </Link>
 
                       <div className="text-left">
-                        <Link
-                          legacyBehavior
-                          href="#"
-                          className="hover:text-rose-500 text-base font-semibold mb-1 md:mb-0 inline-block"
-                        >
-                          {cartItem.prodName}
+                        <Link legacyBehavior href="#">
+                          <a className="hover:text-rose-500 text-base font-semibold mb-1 md:mb-0 inline-block">
+                            {cartItem.prodName}
+                          </a>
                         </Link>
                         <span className="block mb-1 md:hidden">
                           {cartItem.detail}
